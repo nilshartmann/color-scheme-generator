@@ -24,7 +24,7 @@ rm -rf $TMPDIR/${NAME}
 git clone -b gh-pages https://github.com/nilshartmann/${NAME} $TMPDIR/${NAME}
 
 rm -rf $TMPDIR/${NAME}/dist
-cp -r ./public/* $TMPDIR/${NAME}
+cp -r ./client/public/* $TMPDIR/${NAME}
 
 git --git-dir=$TMPDIR/${NAME}/.git --work-tree=$TMPDIR/${NAME} add -A
 git --git-dir=$TMPDIR/${NAME}/.git --work-tree=$TMPDIR/${NAME} commit -m "Deployed to gh-pages from commit $COMMIT"
