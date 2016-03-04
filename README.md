@@ -23,6 +23,9 @@ Run
 TODO
 ====
 * clean up code (both CSS and JavaScript)
+* Fix CSS (esp for small devices)
+* production build should minify js
+* sass.js should not be handled by webpack. Include in index.html instead.
 * better handling of adding new colors
 * save paletts with permalink
 * general increasing of shades/hue/...
