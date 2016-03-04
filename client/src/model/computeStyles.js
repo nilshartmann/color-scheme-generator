@@ -43,7 +43,6 @@ function addStylesToDom(css) {
 }
 
 function collectAllColors(baseColors, shades, getClassName, setAllColors) {
-  console.log('collectAllColors');
   function getColor(className) {
     const elements = document.getElementsByClassName(className);
     const color = elements[0];
@@ -77,12 +76,12 @@ export default function computeStyles(baseColors, shades, getClassName, setAllCo
   // }
 
   const scss = generateScss(baseColors, shades, getClassName);
-  console.log('sass', Sass);
   Sass.compile(scss, result => {
-    console.log('Compile Result', result);
+    if (!result.text) {
+      console.log('Compile Result (error)', result);
+    }
     addStylesToDom(result.text);
     const allColors = result.text ? collectAllColors(baseColors, shades, getClassName) : null;
-    console.log('settingAllColors', allColors);
     setScss(scss);
     setAllColors(allColors);
   });

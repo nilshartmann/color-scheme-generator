@@ -24,7 +24,6 @@ class SassWrapper extends React.Component {
   }
 
   updateSass() {
-      console.log('Render SassWrapper');
       const { baseColors, shades, getClassName, setAllColors, setScss } = this.props;
 
       // note that we change a dom element here that is not under react's control :-/
