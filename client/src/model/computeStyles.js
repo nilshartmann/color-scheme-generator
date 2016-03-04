@@ -1,5 +1,4 @@
-import sass from 'sass.js'
-
+// import sass from 'sass.js'
 
 function generateScss(baseColors, shades, getClassName) {
   function operator(className, shade) {
@@ -78,7 +77,8 @@ export default function computeStyles(baseColors, shades, getClassName, setAllCo
   // }
 
   const scss = generateScss(baseColors, shades, getClassName);
-  sass.compile(scss, result => {
+  console.log('sass', Sass);
+  Sass.compile(scss, result => {
     console.log('Compile Result', result);
     addStylesToDom(result.text);
     const allColors = result.text ? collectAllColors(baseColors, shades, getClassName) : null;
