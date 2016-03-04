@@ -25,6 +25,7 @@ TODO
 * clean up code (both CSS and JavaScript)
 * Fix CSS (esp for small devices)
 * production build should minify js
+* make it in IE work (Object.assign is missing)
 * sass.js should not be handled by webpack. Include in index.html instead.
 * better handling of adding new colors
 * save paletts with permalink
