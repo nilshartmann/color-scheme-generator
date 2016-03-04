@@ -9,11 +9,11 @@ const prodConfig = Object.assign({}, common, {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compressor: {
-    //     warnings: false
-    //   }
-    // })
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
   ]
 });
 
